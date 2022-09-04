@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6B46A7E328C413DA00A8B6EF /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B46A7E228C413DA00A8B6EF /* main.swift */; };
+		6B46A7E328C413DA00A8B6EF /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B46A7E228C413DA00A8B6EF /* App.swift */; };
+		6B46A7EB28C4145900A8B6EF /* ArgumentParser in Frameworks */ = {isa = PBXBuildFile; productRef = 6B46A7EA28C4145900A8B6EF /* ArgumentParser */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -24,7 +25,7 @@
 
 /* Begin PBXFileReference section */
 		6B46A7DF28C413DA00A8B6EF /* JSONtidy */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = JSONtidy; sourceTree = BUILT_PRODUCTS_DIR; };
-		6B46A7E228C413DA00A8B6EF /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		6B46A7E228C413DA00A8B6EF /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6B46A7EB28C4145900A8B6EF /* ArgumentParser in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -57,7 +59,7 @@
 		6B46A7E128C413DA00A8B6EF /* JSONtidy */ = {
 			isa = PBXGroup;
 			children = (
-				6B46A7E228C413DA00A8B6EF /* main.swift */,
+				6B46A7E228C413DA00A8B6EF /* App.swift */,
 			);
 			path = JSONtidy;
 			sourceTree = "<group>";
@@ -78,6 +80,9 @@
 			dependencies = (
 			);
 			name = JSONtidy;
+			packageProductDependencies = (
+				6B46A7EA28C4145900A8B6EF /* ArgumentParser */,
+			);
 			productName = JSONtidy;
 			productReference = 6B46A7DF28C413DA00A8B6EF /* JSONtidy */;
 			productType = "com.apple.product-type.tool";
@@ -106,6 +111,9 @@
 				Base,
 			);
 			mainGroup = 6B46A7D628C413DA00A8B6EF;
+			packageReferences = (
+				6B46A7E928C4145900A8B6EF /* XCRemoteSwiftPackageReference "swift-argument-parser" */,
+			);
 			productRefGroup = 6B46A7E028C413DA00A8B6EF /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -120,7 +128,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6B46A7E328C413DA00A8B6EF /* main.swift in Sources */,
+				6B46A7E328C413DA00A8B6EF /* App.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -243,9 +251,11 @@
 		6B46A7E728C413DA00A8B6EF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JSLYSSKG9L;
 				ENABLE_HARDENED_RUNTIME = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jsontidy.quinntech;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 			};
@@ -254,9 +264,11 @@
 		6B46A7E828C413DA00A8B6EF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JSLYSSKG9L;
 				ENABLE_HARDENED_RUNTIME = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jsontidy.quinntech;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 			};
@@ -284,6 +296,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		6B46A7E928C4145900A8B6EF /* XCRemoteSwiftPackageReference "swift-argument-parser" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-argument-parser.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		6B46A7EA28C4145900A8B6EF /* ArgumentParser */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6B46A7E928C4145900A8B6EF /* XCRemoteSwiftPackageReference "swift-argument-parser" */;
+			productName = ArgumentParser;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 6B46A7D728C413DA00A8B6EF /* Project object */;
 }
