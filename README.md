@@ -1,6 +1,6 @@
 # JSONtiddy
 A Mac command line app to tiddy up JSON 
-
+```
 OVERVIEW: Adjusts JSON files to compress or expand data, and also provide key sorting.
 
 USAGE: jsontidy [--output <output>] [--force-overwrite] [--prettify] [--sort] <file>
@@ -14,3 +14,4 @@ OPTIONS:
   -p, --prettify          Neatly formats the output.
   -s, --sort              Sort keys alphabetically.
   -h, --help              Show help information.
+```
